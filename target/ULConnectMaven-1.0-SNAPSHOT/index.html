@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        
+        <script>
+            function init(){
+                $("#but_registrate").click(function(){
+                    window.location.href = "MostrarPantallaRegistroServlet";
+                });
+            }
+            window.addEventListener("load", init);
+        </script>
+    </head>
+    <body>
+        <!-- Comentario de prueba 2 -->
+        <h1>ULima Connect</h1>
+        <form role="form" method="POST" action="LoginServlet">
+            <div class="form-group">
+                <label for="txt_codigo">Codigo</label>
+                <input type="number" class="form-control" id="txt_codigo" name="txt_codigo" placeholder=" Ingrese c&oacute;digo">
+            </div>
+            <div class="form-group">
+                <label for="txt_password">Password</label>
+                <input type="password" class="form-control" id="txt_password" name="txt_password" placeholder="Password">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-default">Login</button>
+            </div>
+            
+        </form>
+        <button type="button" class="btn btn-link" id="but_registrate">Reg&iacute;strate</button>
+    </body>
+</html>
